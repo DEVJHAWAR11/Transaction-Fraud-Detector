@@ -1,0 +1,31 @@
+# python
+__pycache__/
+*.py[cod]
+*.pyo
+venv/
+.env
+*.egg-info/
+dist/
+build/
+
+# jupyter
+.ipynb_checkpoints/
+
+# data - raw csvs stay local
+data/raw/*.csv
+
+# models
+models/*.pkl
+models/*.joblib
+models/*.json
+models/*.bin
+
+# mlflow
+mlruns/
+
+# docs stay local only
+docs/
+
+# os
+.DS_Store
+Thumbs.db
