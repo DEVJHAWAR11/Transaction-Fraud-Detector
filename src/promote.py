@@ -1,8 +1,5 @@
 import pandas as pd
 import numpy as np
-import mlflow
-import mlflow.sklearn
-import mlflow.xgboost
 from sklearn.metrics import precision_score, recall_score, f1_score, roc_auc_score
 import joblib
 import shutil
@@ -34,6 +31,7 @@ def check_thresholds(metrics):
     return failures
 
 def get_champion_metrics():
+    import mlflow
     # pull best run from mlflow by f1 score
     client = mlflow.tracking.MlflowClient()
     experiment = client.get_experiment_by_name("fraud-detection")
